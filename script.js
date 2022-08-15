@@ -59,12 +59,18 @@ const questions = [
 
 let questionDisplay = 0
 let score = 0
+
+
+
 //Start button functionality
 startButton.addEventListener('click', ()=> {
     frontPage.style.display = 'none'
     container.style.display = 'grid'
     oneQuestion(questionDisplay)
 })
+
+
+
 
 //inserting the created questions in the html and also 
 const oneQuestion = (index) => {
@@ -84,5 +90,22 @@ const oneQuestion = (index) => {
 
 
 
+
+
+
+//score counter
+const checkAnswer = (e) => {
+    const allAnswers = document.querySelectorAll('.nextButton')
+    const answerBoolean = e.target.dataset.isCorrect
+    if (answerBoolean == 'true'){
+        e.target.classList.add('valid')
+        score ++
+        spanScore.textContent = score
+    }else{
+        e.target.classList.add('invalid')
+
+    }
+
+}
 
 
