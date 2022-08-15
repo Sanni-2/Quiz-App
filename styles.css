@@ -21,6 +21,14 @@ body {
 }
 
 
+.score {
+    font-size: 40px;
+    width: 10vw;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 45%;
+}
 
 
 
