@@ -105,7 +105,9 @@ const checkAnswer = (e) => {
         e.target.classList.add('invalid')
 
     }
-
+    allAnswers.forEach(el => {
+        el.disabled = true
+    })
 }
 
 
